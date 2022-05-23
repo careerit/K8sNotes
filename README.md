@@ -117,7 +117,7 @@ The easiest way to create EKS cluster is by using `eksctl` a specialized command
 - Prerequisites:
     - [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
     - [eksctl](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html) 
-
+    - IAM user with read & write permissions on EKS and EC2
 
 Once you have `aws cli` and `eksctl` installed, please save the below config as file (ex: eks.yaml)
 
@@ -140,6 +140,7 @@ nodeGroups:
     maxSize: 3
 availabilityZones: ['us-east-1a', 'us-east-1b', 'us-east-1c']
 ```
+
 The above configuration deploys a Cluster with the name `eksdemo` in the region `us-east-1` with a minimum of 2 instances and maximum 3 instances each of the size mx.xlarge. Youc an  upload the values as per your requirement and deploy this cluster with the below command
 
 ```bash
@@ -179,8 +180,11 @@ eksctl delete cluster -f eks.yaml
 
 Azure Kubernetes services cluster can be created with the below commands
 
-- Create a Resource Group
+# Prerequisites
+    - [AZ CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) 
+    - An account in Azure subscription with full rights on AKS service
 
+- Create a Resource Group
 
 ```bash
 az group create --resource-group aks --region eastus
