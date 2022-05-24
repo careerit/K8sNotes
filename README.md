@@ -174,13 +174,14 @@ To delete the cluster run the following command
 
 ```bash
 eksctl delete cluster -f eks.yaml  
-```
 
-### AKS installation.
+
+### AKS installation
 
 Azure Kubernetes services cluster can be created with the below commands
 
-# Prerequisites
+#### Prerequisites
+
     - [AZ CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) 
     - An account in Azure subscription with full rights on AKS service
 
