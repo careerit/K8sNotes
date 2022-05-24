@@ -182,8 +182,8 @@ Azure Kubernetes services cluster can be created with the below commands
 
 #### Prerequisites
 
-    - [AZ CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) 
-    - An account in Azure subscription with full rights on AKS service
+    [AZ CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) 
+    An account in Azure subscription with full rights on AKS service
 
 - Create a Resource Group
 
